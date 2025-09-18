@@ -1,0 +1,78 @@
+export const fontStyles = {
+    denton: {
+        fontFamily: 'var(--font-family-denton)',
+    },
+    geist: {
+        fontFamily: 'var(--font-family-geist)',
+    },
+    heading01: {
+        fontSize: 'var(--font-size-heading-01)',
+        lineHeight: 'var(--line-height-heading-01)',
+        letterSpacing: 'var(--letter-spacing-heading-01)',
+        fontFamily: 'var(--font-family-denton)',
+        fontWeight: 'var(--font-weight-bold)',
+    },
+    heading02: {
+        fontSize: 'var(--font-size-heading-02)',
+        lineHeight: 'var(--line-height-heading-02)',
+        letterSpacing: 'var(--letter-spacing-heading-02)',
+        fontFamily: 'var(--font-family-denton)',
+        fontWeight: 'var(--font-weight-bold)',
+    },
+    heading03: {
+        fontSize: 'var(--font-size-heading-03)',
+        lineHeight: 'var(--line-height-heading-03)',
+        letterSpacing: 'var(--letter-spacing-heading-03)',
+        fontFamily: 'var(--font-family-denton)',
+        fontWeight: 'var(--font-weight-bold)',
+    },
+    heading04: {
+        fontSize: 'var(--font-size-heading-04)',
+        lineHeight: 'var(--line-height-heading-04)',
+        letterSpacing: 'var(--letter-spacing-heading-04)',
+        fontFamily: 'var(--font-family-denton)',
+        fontWeight: 'var(--font-weight-bold)',
+    },
+    heading05: {
+        fontSize: 'var(--font-size-heading-05)',
+        lineHeight: 'var(--line-height-heading-05)',
+        letterSpacing: 'var(--letter-spacing-heading-05)',
+        fontFamily: 'var(--font-family-denton)',
+        fontWeight: 'var(--font-weight-bold)',
+    },
+    bodyL: {
+        fontSize: 'var(--font-size-body-l)',
+        lineHeight: 'var(--line-height-body-l)',
+        letterSpacing: 'var(--letter-spacing-body-l)',
+        fontFamily: 'var(--font-family-geist)',
+        fontWeight: 'var(--font-weight-regular)',
+    },
+    bodyM: {
+        fontSize: 'var(--font-size-body-m)',
+        lineHeight: 'var(--line-height-body-m)',
+        letterSpacing: 'var(--letter-spacing-body-m)',
+        fontFamily: 'var(--font-family-geist)',
+        fontWeight: 'var(--font-weight-regular)',
+    },
+    bodyS: {
+        fontSize: 'var(--font-size-body-s)',
+        lineHeight: 'var(--line-height-body-s)',
+        letterSpacing: 'var(--letter-spacing-body-s)',
+        fontFamily: 'var(--font-family-geist)',
+        fontWeight: 'var(--font-weight-regular)',
+    },
+    caption: {
+        fontSize: 'var(--font-size-caption)',
+        lineHeight: 'var(--line-height-caption)',
+        letterSpacing: 'var(--letter-spacing-caption)',
+        fontFamily: 'var(--font-family-geist)',
+        fontWeight: 'var(--font-weight-regular)',
+    },
+    button: {
+        fontSize: 'var(--font-size-button)',
+        lineHeight: 'var(--line-height-button)',
+        letterSpacing: 'var(--letter-spacing-button)',
+        fontFamily: 'var(--font-family-geist)',
+        fontWeight: 'var(--font-weight-semibold)',
+    },
+} as const;
