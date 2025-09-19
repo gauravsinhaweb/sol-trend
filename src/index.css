@@ -1,59 +1,116 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Denton+Condensed:wght@400;500;600;700&display=swap");
+
+@font-face {
+    font-family: 'Denton';
+    src: url('./assets/fonts/denton/Denton Test Thin 100.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Denton';
+    src: url('./assets/fonts/denton/Denton Test Light 300.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Denton';
+    src: url('./assets/fonts/denton/Denton Test Regular 400.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Denton';
+    src: url('./assets/fonts/denton/Denton Test Medium 500.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Denton';
+    src: url('./assets/fonts/denton/Denton Test Bold 700.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Denton';
+    src: url('./assets/fonts/denton/Denton Test ExtraBold 800.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Denton';
+    src: url('./assets/fonts/denton/Denton Test Black 900.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @theme inline {
-    --color-stone-50: #fafaf9;
-    --color-stone-100: #f5f5f4;
-    --color-stone-200: #e7e5e4;
-    --color-stone-300: #d6d3d1;
-    --color-stone-400: #a8a29e;
-    --color-stone-500: #78716c;
-    --color-stone-600: #57534e;
-    --color-stone-700: #44403c;
-    --color-stone-800: #292524;
-    --color-stone-900: #1c1917;
-    --color-stone-950: #0c0a09;
+    --color-stone-50: #FAFAF9;
+    --color-stone-100: #F5F5F4;
+    --color-stone-200: #E7E6E4;
+    --color-stone-300: #D6D4D1;
+    --color-stone-400: #A8A49E;
+    --color-stone-500: #78736C;
+    --color-stone-600: #57534E;
+    --color-stone-700: #44413C;
+    --color-stone-800: #312F2C;
+    --color-stone-900: #1C1A17;
+    --color-stone-950: #11100D;
 
-    --color-red-50: #fef2f2;
-    --color-red-100: #fee2e2;
-    --color-red-200: #fecaca;
-    --color-red-300: #fca5a5;
-    --color-red-400: #f87171;
-    --color-red-500: #ef4444;
-    --color-red-600: #dc2626;
-    --color-red-700: #b91c1c;
-    --color-red-800: #991b1b;
-    --color-red-900: #7f1d1d;
-    --color-red-950: #450a0a;
-    --color-red-1000: #2d0a0a;
+    --color-red-50: #FFFBFA;
+    --color-red-100: #FEF3F2;
+    --color-red-200: #FEE4E2;
+    --color-red-300: #FECDCA;
+    --color-red-400: #FDA29B;
+    --color-red-500: #F97066;
+    --color-red-600: #F04438;
+    --color-red-700: #D92D20;
+    --color-red-800: #972E26;
+    --color-red-900: #7E352F;
+    --color-red-950: #3F1D17;
+    --color-red-1000: #311612;
 
-    --color-primary-50: #fffbeb;
-    --color-primary-100: #fef3c7;
-    --color-primary-200: #fde68a;
-    --color-primary-300: #fcd34d;
-    --color-primary-400: #fbbf24;
-    --color-primary-500: #f59e0b;
-    --color-primary-600: #d97706;
-    --color-primary-700: #b45309;
-    --color-primary-800: #92400e;
-    --color-primary-900: #78350f;
-    --color-primary-950: #451a03;
-    --color-primary-1000: #2d0f00;
+    --color-primary-50: #FFFCF5;
+    --color-primary-100: #FFF9EB;
+    --color-primary-200: #FEEFC7;
+    --color-primary-300: #FEDD89;
+    --color-primary-400: #FECB4B;
+    --color-primary-500: #FFC42F;
+    --color-primary-600: #F7B409;
+    --color-primary-700: #DC9E03;
+    --color-primary-800: #B58408;
+    --color-primary-900: #936D0D;
+    --color-primary-950: #533E09;
+    --color-primary-1000: #2C220A;
 
-    --color-green-50: #f0fdf4;
-    --color-green-100: #dcfce7;
-    --color-green-200: #bbf7d0;
-    --color-green-300: #86efac;
-    --color-green-400: #4ade80;
-    --color-green-500: #22c55e;
-    --color-green-600: #16a34a;
-    --color-green-700: #15803d;
-    --color-green-800: #166534;
-    --color-green-900: #14532d;
-    --color-green-950: #052e16;
+    --color-green-50: #F6FEFA;
+    --color-green-100: #ECFDF6;
+    --color-green-200: #D1FAE8;
+    --color-green-300: #A5F6D3;
+    --color-green-400: #6CE9B3;
+    --color-green-500: #32D58E;
+    --color-green-600: #12B76F;
+    --color-green-700: #039857;
+    --color-green-800: #166543;
+    --color-green-900: #17593C;
+    --color-green-950: #103927;
+    --color-green-1000: #082016;
 
 
     --radius-sm: calc(var(--radius) - 4px);
@@ -177,8 +234,8 @@
     /* Font Families */
     --font-family-sans: "Inter", sans-serif;
     --font-family-display: "Geist", sans-serif;
-    --font-family-heading: "Denton Condensed", serif;
-    --font-family-denton: "Denton Condensed", serif;
+    --font-family-heading: "Denton", serif;
+    --font-family-denton: "Denton", serif;
     --font-family-geist: "Geist", sans-serif;
 }
 

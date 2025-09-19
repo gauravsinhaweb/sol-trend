@@ -13,7 +13,7 @@ export const Card: React.FC<CardProps> = ({
     className = '',
     onClick,
 }) => {
-    const baseClasses = 'bg-stone-800 border border-stone-700 rounded-xl p-6 shadow-card';
+    const baseClasses = 'bg-stone-900 border border-stone-800 rounded-xl p-6 shadow-card';
     const hoverClasses = hover ? 'hover:shadow-card-hover transition-shadow duration-200 cursor-pointer' : '';
     const classes = `${baseClasses} ${hoverClasses} ${className}`;
 

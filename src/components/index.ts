@@ -4,3 +4,7 @@ export { Alert } from './Alert';
 export { StatCard } from './StatCard';
 export { Tag } from './Tag';
 export { Card } from './Card';
+export { TopNav } from './TopNav';
+export { BottomNav } from './BottomNav';
+export { HeroSection } from './HeroSection';
+export { TradingTable } from './TradingTable';
