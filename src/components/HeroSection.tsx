@@ -34,9 +34,65 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
                         </div>
                     </div>
 
-                    {/* Middle Section: 2x2 Grid of Stats */}
-                    <div className="lg:col-span-1 p-8">
+                    {/* Middle Section: Top + Bottom Split */}
+                    <div className="lg:col-span-1 ">
+                        <div className="h-full flex flex-col">
+                            {/* Top Section: Single row with DEX VOLUME and chart */}
+                            <div className="flex-1 border-b border-stone-700 px-[32px] py-[41px]">
+                                <div className="grid grid-cols-2 gap-4 h-full">
+                                    {/* Left: DEX VOLUME */}
+                                    <div className="flex flex-col justify-center">
+                                        <div className="space-y-6">
+                                            <div className="text-primary-200/40 text-lg  uppercase tracking-wide font-britti">DEX VOLUME</div>
+                                            <div className="flex items-center space-x-2 gap-3">
+                                                <div className="text-4xl text-primary-200 font-denton tracking-tight">$118.92B</div>
+                                                <span className="border border-[#17593C] text-[#32D58E] px-2 py-1 text-xs font-medium bg-[#082016] font-geist">
+                                                    +0.22%
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
 
+                                    {/* Right: DEX volume with line chart */}
+                                    <div className="flex flex-col justify-center">
+                                        <div className="space-y-3">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Bottom Section: Split into left and right */}
+                            <div className="flex-1 grid grid-cols-2 gap-4 p-8">
+                                {/* Bottom Left: Coin Launched */}
+                                <div className="flex flex-col justify-center">
+                                    <div className="space-y-6">
+                                        <div className="text-primary-200/40 text-lg   tracking-wide font-britti font-thin">Coin Launched</div>
+                                        <div className="flex items-center space-x-2 gap-3">
+                                            <div className="text-4xl text-primary-200 font-denton tracking-tight">27.77K</div>
+                                            <span className="border border-[#7E352F] text-[#F97066] px-2 py-1 text-xs font-medium bg-[#311612] font-geist">
+                                                +0.22%
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Bottom Right: Solana */}
+                                <div className="flex flex-col justify-center">
+                                    <div className="flex flex-col justify-center">
+                                        <div className="space-y-6">
+                                            <div className="text-primary-200/40 text-lg   tracking-wide font-britti font-thin ">Solana</div>
+                                            <div className="flex items-center space-x-2 gap-3">
+                                                <div className="text-4xl text-primary-200 font-denton tracking-tight">$199.3</div>
+                                                <span className="border border-[#17593C] text-[#32D58E] px-2 py-1 text-xs font-medium bg-[#082016] font-geist">
+                                                    +0.22%
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Right Section: Additional content or placeholder */}

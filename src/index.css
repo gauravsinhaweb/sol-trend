@@ -57,6 +57,70 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Britti';
+    src: url('./assets/fonts/britti/BrittiSansTrial-Light-BF6757bfd494951.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Britti';
+    src: url('./assets/fonts/britti/BrittiSansTrial-LightItalic-BF6757bfd48c7c7.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Britti';
+    src: url('./assets/fonts/britti/BrittiSansTrial-Regular-BF6757bfd47ffbf.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Britti';
+    src: url('./assets/fonts/britti/BrittiSansTrial-RegularItalic-BF6757bfd44e013.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Britti';
+    src: url('./assets/fonts/britti/BrittiSansTrial-Semibold-BF6757bfd443a8a.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Britti';
+    src: url('./assets/fonts/britti/BrittiSansTrial-SemiboldItalic-BF6757bfd411c3a.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Britti';
+    src: url('./assets/fonts/britti/BrittiSansTrial-Bold-BF6757bfd4a96ed.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Britti';
+    src: url('./assets/fonts/britti/BrittiSansTrial-BoldItalic-BF6757bfd4a2285.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -236,6 +300,7 @@
     --font-family-display: "Geist", sans-serif;
     --font-family-heading: "Denton", serif;
     --font-family-denton: "Denton", serif;
+    --font-family-britti: "Britti", sans-serif;
     --font-family-geist: "Geist", sans-serif;
 }
 
@@ -332,6 +397,10 @@
 
     .font-denton {
         font-family: var(--font-family-denton);
+    }
+
+    .font-britti {
+        font-family: var(--font-family-britti);
     }
 
     .font-geist {
