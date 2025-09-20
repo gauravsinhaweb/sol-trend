@@ -156,7 +156,7 @@ export const TradingTable: React.FC<TradingTableProps> = ({ className = '' }) =>
 
     return (
         <div className={`px-6 py-6 ${className}`}>
-            <div className="bg-stone-900 rounded-xl border border-stone-800 overflow-hidden">
+            <div className="bg-stone-900 rounded-2xl border border-stone-800 overflow-hidden">
                 <div className="px-6 py-4 border-b border-stone-700">
                     <div className="flex items-center justify-between">
                         <div className="flex space-x-6">
