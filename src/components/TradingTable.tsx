@@ -155,39 +155,39 @@ export const TradingTable: React.FC<TradingTableProps> = ({ className = '' }) =>
     );
 
     return (
-        <div className={`px-6 py-6 ${className}`}>
-            <div className="bg-stone-900 rounded-2xl border border-stone-800 overflow-hidden">
-                <div className="px-6 py-4 border-b border-stone-700">
+        <div className={`${className}`}>
+            <div className="overflow-hidden">
+                <div className="px-6 py-4">
                     <div className="flex items-center justify-between">
                         <div className="flex space-x-6">
-                            <button className="text-white font-medium border-b-2 border-primary-500 pb-1">
+                            <button className="text-primary-200 font-denton font-extralight text-2xl">
                                 Trending
                             </button>
-                            <button className="text-stone-400 hover:text-white transition-colors">
+                            <button className="text-primary-200/40 font-denton font-extralight text-2xl">
                                 Screener
                             </button>
                         </div>
 
                         <div className="flex items-center space-x-3">
-                            <select className="bg-stone-700 text-white px-3 py-2 rounded-lg text-sm border border-stone-600 flex items-center">
+                            <select className="bg-stone-900 text-white px-3 py-2 text-sm flex items-center">
                                 <option>Degen</option>
                             </select>
-                            <select className="bg-stone-700 text-white px-3 py-2 rounded-lg text-sm border border-stone-600 flex items-center">
+                            <select className="bg-stone-900 text-white px-3 py-2 text-sm flex items-center">
                                 <option>24h</option>
                             </select>
-                            <button className="bg-stone-700 hover:bg-stone-600 text-white px-3 py-2 rounded-lg text-sm border border-stone-600 flex items-center space-x-2 transition-colors">
+                            <button className="bg-stone-900 hover:bg-stone-600 text-white px-3 py-2 text-sm flex items-center space-x-2 transition-colors">
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.207A1 1 0 013 6.5V4z" />
                                 </svg>
                                 <span>Filters</span>
                             </button>
-                            <button className="bg-stone-700 hover:bg-stone-600 text-white px-3 py-2 rounded-lg text-sm border border-stone-600 flex items-center space-x-2 transition-colors">
+                            <button className="bg-stone-900 hover:bg-stone-600 text-white px-3 py-2 text-sm flex items-center space-x-2 transition-colors">
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                                 </svg>
                                 <span>LP</span>
                             </button>
-                            <button className="bg-stone-700 hover:bg-stone-600 text-white px-3 py-2 rounded-lg text-sm border border-stone-600 flex items-center transition-colors">
+                            <button className="bg-stone-900 hover:bg-stone-600 text-white px-3 py-2  text-sm  flex items-center transition-colors">
                                 <span className="text-sm">1 =</span>
                                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -197,42 +197,42 @@ export const TradingTable: React.FC<TradingTableProps> = ({ className = '' }) =>
                     </div>
                 </div>
 
-                <div className="overflow-x-auto">
+                <div className="overflow-x-auto px-10">
                     <table className="w-full">
-                        <thead className="bg-stone-800/50">
+                        <thead className="bg-[#11100d]">
                             <tr>
-                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-300 uppercase tracking-wider">
+                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">
                                     TOKEN
                                 </th>
-                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-300 uppercase tracking-wider">
+                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">
                                     PRICE CHART
                                 </th>
-                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-300 uppercase tracking-wider">
+                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">
                                     AGE
                                 </th>
-                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-300 uppercase tracking-wider">
+                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">
                                     MARKET CAP
                                 </th>
-                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-300 uppercase tracking-wider">
+                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">
                                     VOLUME
                                 </th>
-                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-300 uppercase tracking-wider">
+                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">
                                     LIQUIDITY
                                 </th>
-                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-300 uppercase tracking-wider">
+                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">
                                     24H FEE / TVL
                                 </th>
-                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-300 uppercase tracking-wider">
+                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">
                                     TOKEN INFO
                                 </th>
-                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-300 uppercase tracking-wider">
+                                <th className="px-6 py-4 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">
                                     QUICK LP
                                 </th>
                             </tr>
                         </thead>
-                        <tbody className="divide-y divide-stone-700">
+                        <tbody className="bg-[#11100d]">
                             {mockTokens.map((token) => (
-                                <tr key={token.id} className="hover:bg-stone-700/30 transition-colors">
+                                <tr key={token.id} className="hover:bg-[#11100d]">
                                     <td className="px-6 py-4 whitespace-nowrap">
                                         <div className="flex items-center space-x-3">
                                             <div className="w-8 h-8 bg-stone-700 rounded-full flex items-center justify-center text-sm">
