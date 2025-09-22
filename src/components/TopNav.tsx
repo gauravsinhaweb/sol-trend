@@ -10,7 +10,7 @@ export const TopNav: React.FC<TopNavProps> = ({ className = '' }) => {
         <nav className={`bg-black border-b border-stone-700 px-6 py-4 ${className}`}>
             <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-8">
-                    <div className="text-2xl flex items-center space-x-2 font-denton font-thin text-primary-100">
+                    <div className="text-2xl flex items-center pl-4  space-x-2 font-denton font-thin text-primary-100 cursor-pointer">
                         <img src={logo} alt="Cleopatra" className="w-6 h-6" />
                         <span className="text-primary-100">cleopetra</span>
                     </div>
