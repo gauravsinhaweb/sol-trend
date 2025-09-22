@@ -22,7 +22,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
                                     <p className="text-stone-500 mb-8 text-lg max-w-64">
                                         Turn your liquidity into daily rewards with Cleo Army.
                                     </p>
-                                    <button className="bg-primary-200 hover:bg-primary-300 text-stone-900 px-6 py-3 pr-0.5 h-10 transition-colors flex items-center space-x-2">
+                                    <button className="bg-primary-200 cursor-pointer hover:bg-primary-300 text-stone-900 px-6 py-3 pr-0.5 h-10 transition-colors flex items-center space-x-2">
                                         <span className="font-semibold text-stone-900 text-lg">Join Cleo Army</span>
                                         <img src={ArrowRightSvg} alt="arrow right" className="" />
                                     </button>
