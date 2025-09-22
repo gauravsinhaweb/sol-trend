@@ -158,11 +158,11 @@ export const TradingTable: React.FC<TradingTableProps> = ({ className = '' }) =>
             <div className="overflow-hidden">
                 <div className="px-6 py-4">
                     <div className="flex items-center justify-between">
-                        <div className="flex space-x-6">
-                            <button className="text-primary-200 font-denton font-extralight text-2xl">
+                        <div className="flex space-x-6 px-6">
+                            <button className="text-primary-200 cursor-pointer font-denton font-extralight text-2xl">
                                 Trending
                             </button>
-                            <button className="text-primary-200/40 font-denton font-extralight text-2xl">
+                            <button className="text-primary-200/40 cursor-pointer font-denton font-extralight text-2xl">
                                 Screener
                             </button>
                         </div>
@@ -278,7 +278,7 @@ export const TradingTable: React.FC<TradingTableProps> = ({ className = '' }) =>
                                         />
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap">
-                                        <button className="bg-stone-700 hover:bg-stone-600 text-white px-3 py-2 rounded-lg text-sm border border-stone-600 flex items-center space-x-1 transition-colors">
+                                        <button className="bg-[#FFF3D533] hover:bg-stone-600 text-white px-3 py-2 rounded-xs text-sm border border-stone-600 flex items-center space-x-1 transition-colors">
                                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                                             </svg>
