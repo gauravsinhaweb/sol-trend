@@ -35,11 +35,12 @@ const getPriceChartDirection = (change24h: number): 'up' | 'down' => {
 
 // Convert MeteoraPool to TokenData
 const convertPoolToTokenData = (pool: MeteoraPool, index: number): TokenData => {
-    const icons = ['👨‍🦱', '👨‍💼', '🤘', '🎷', '📱', '🚀', '💎', '🔥', '⭐', '🎯'];
-
     // Extract token name from the pool name (e.g., "PUMP-SOL" -> "PUMP")
     const tokenName = pool.name.split('-')[0];
     const tokenSymbol = `$${tokenName}`;
+
+    // Use first letter of token name as icon
+    const icon = tokenName.charAt(0).toUpperCase();
 
     // Calculate 24h change percentage from APR (approximation)
     const change24h = pool.apr * 100; // Convert APR to percentage
@@ -72,7 +73,7 @@ const convertPoolToTokenData = (pool: MeteoraPool, index: number): TokenData => 
         id: pool.address,
         name: tokenName,
         symbol: tokenSymbol,
-        icon: icons[index % icons.length],
+        icon: icon,
         poolAddress: pool.address,
         tokenXMint: pool.mint_x,
         tokenYMint: pool.mint_y,
@@ -212,22 +213,7 @@ export const TradingTable: React.FC<TradingTableProps> = ({ className = '' }) =>
 
         return (
             <div className="w-16 h-8 bg-stone-800 rounded flex items-center justify-center p-1">
-                <svg width="60" height="24" viewBox="0 0 60 24" className="overflow-visible">
-                    <polyline
-                        points={points}
-                        fill="none"
-                        stroke={color}
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    />
-                    <circle
-                        cx="16"
-                        cy={type === 'up' ? "0" : "12"}
-                        r="2"
-                        fill={color}
-                    />
-                </svg>
+
             </div>
         );
     };
@@ -365,7 +351,7 @@ export const TradingTable: React.FC<TradingTableProps> = ({ className = '' }) =>
                                     <tr key={token.id} className="hover:bg-stone-800/50 border-b border-stone-800">
                                         <td className="px-6 py-4 whitespace-nowrap">
                                             <div className="flex items-center space-x-3">
-                                                <div className="w-8 h-8 bg-stone-800 rounded-full flex items-center justify-center text-sm">
+                                                <div className="w-8 h-8 bg-stone-800 rounded-full flex items-center justify-center text-sm font-bold text-white">
                                                     {token.icon}
                                                 </div>
                                                 <div>
