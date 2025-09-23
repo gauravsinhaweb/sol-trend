@@ -1,4 +1,4 @@
-import { LPConfig } from '../services/lpService';
+import type { LPConfig } from '../services/lpService';
 
 export const COMMON_TOKEN_MINTS = {
     SOL: 'So11111111111111111111111111111111111111112',

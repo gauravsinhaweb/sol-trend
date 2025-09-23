@@ -32,13 +32,6 @@ export class LPDebugger {
         console.log('=== Testing LP Service ===');
 
         try {
-            const mockWallet = {
-                signTransaction: async (tx: any) => {
-                    console.log('Mock wallet signing transaction:', tx);
-                    return tx;
-                }
-            };
-
             const result = await lpService.quickLP({
                 tokenXMint: COMMON_TOKEN_MINTS.SOL,
                 tokenYMint: COMMON_TOKEN_MINTS.USDC,

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLP } from '../hooks/useLP';
-import { COMMON_TOKEN_MINTS, PRESET_LP_CONFIGS, getTokenDisplayName } from '../utils/lpUtils';
-import { LPConfig } from '../services/lpService';
+import { COMMON_TOKEN_MINTS, PRESET_LP_CONFIGS } from '../utils/lpUtils';
+import type { LPConfig } from '../services/lpService';
 
 interface LPManagerProps {
     wallet?: any;

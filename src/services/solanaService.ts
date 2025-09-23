@@ -3,16 +3,13 @@ import {
     PublicKey,
     Transaction,
     VersionedTransaction,
-    sendAndConfirmTransaction,
-    SendOptions
+    sendAndConfirmTransaction
 } from '@solana/web3.js';
 
 export class SolanaService {
     private connection: Connection;
-    private rpcUrl: string;
 
     constructor(rpcUrl: string = 'https://api.mainnet-beta.solana.com') {
-        this.rpcUrl = rpcUrl;
         this.connection = new Connection(rpcUrl, 'confirmed');
     }
 
@@ -88,14 +85,14 @@ export class SolanaService {
         }
     }
 
-    async getTokenAccounts(walletAddress: string): Promise<any[]> {
+    async getTokenAccounts(walletAddress: string): Promise<unknown[]> {
         try {
             const publicKey = new PublicKey(walletAddress);
             const tokenAccounts = await this.connection.getTokenAccountsByOwner(publicKey, {
                 programId: new PublicKey('TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA'),
             });
 
-            return tokenAccounts.value;
+            return [...tokenAccounts.value];
         } catch (error) {
             console.error('Error getting token accounts:', error);
             return [];

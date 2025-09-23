@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 interface WalletConnectionProps {
     onWalletConnected?: (wallet: any, address: string) => void;

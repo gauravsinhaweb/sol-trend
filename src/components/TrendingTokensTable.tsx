@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { meteoraApi, MeteoraPool } from '../services/meteoraApi';
+import { meteoraApi } from '../services/meteoraApi';
+import type { MeteoraPool } from '../services/meteoraApi';
 import { cleopetraApi } from '../services/cleopetraApi';
-import { solanaService } from '../services/solanaService';
 
 interface TrendingTokensTableProps {
     className?: string;
@@ -79,7 +79,7 @@ export const TrendingTokensTable: React.FC<TrendingTokensTableProps> = ({ classN
             // Generate mock market data for each token
             const mockData = new Map<string, TokenMarketData>();
             pools.forEach(pool => {
-                mockData.set(pool.token_x.mint, generateMockMarketData());
+                mockData.set(pool.mint_x, generateMockMarketData());
             });
             setMarketData(mockData);
         } catch (err) {
@@ -99,8 +99,8 @@ export const TrendingTokensTable: React.FC<TrendingTokensTableProps> = ({ classN
             const mockWalletAddress = '11111111111111111111111111111111';
 
             const response = await cleopetraApi.createDLMMPosition(
-                pool.token_x.mint,
-                pool.token_y.mint,
+                pool.mint_x,
+                pool.mint_y,
                 mockWalletAddress,
                 'normal' // You can change to 'zap' for Jupiter swap integration
             );
@@ -198,7 +198,7 @@ export const TrendingTokensTable: React.FC<TrendingTokensTableProps> = ({ classN
                         </thead>
                         <tbody className="divide-y divide-stone-800">
                             {trendingTokens.map((pool) => {
-                                const data = marketData.get(pool.token_x.mint);
+                                const data = marketData.get(pool.mint_x);
                                 if (!data) return null;
 
                                 return (
@@ -207,15 +207,15 @@ export const TrendingTokensTable: React.FC<TrendingTokensTableProps> = ({ classN
                                             <div className="flex items-center">
                                                 <div className="w-8 h-8 bg-stone-700 rounded-full flex items-center justify-center mr-3">
                                                     <span className="text-sm font-bold text-white">
-                                                        {pool.token_x.symbol.charAt(0)}
+                                                        {pool.name.charAt(0)}
                                                     </span>
                                                 </div>
                                                 <div>
                                                     <div className="text-sm font-medium text-white">
-                                                        {pool.token_x.name}
+                                                        {pool.name}
                                                     </div>
                                                     <div className="text-sm text-stone-400">
-                                                        {pool.token_x.symbol}
+                                                        ${pool.name}
                                                     </div>
                                                 </div>
                                             </div>

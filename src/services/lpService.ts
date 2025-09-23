@@ -1,4 +1,5 @@
-import { cleopetraApi, InitializeDLMMRequest, InitializeDLMMResponse } from './cleopetraApi';
+import { cleopetraApi } from './cleopetraApi';
+import type { InitializeDLMMRequest } from './cleopetraApi';
 import { solanaService } from './solanaService';
 
 export interface LPConfig {

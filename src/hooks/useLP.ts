@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
-import { lpService, LPConfig, QuickLPOptions } from '../services/lpService';
-import { validateLPConfig, getRecommendedConfig, validateWalletAddress } from '../utils/lpUtils';
+import { lpService } from '../services/lpService';
+import type { LPConfig, QuickLPOptions } from '../services/lpService';
+import { validateLPConfig, validateWalletAddress } from '../utils/lpUtils';
 
 export interface UseLPState {
     isLoading: boolean;
