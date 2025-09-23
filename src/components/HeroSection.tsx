@@ -1,6 +1,8 @@
 import React from 'react';
 import SolanaRingSvg from '../assets/svgs/solana-ring.svg';
 import ArrowRightSvg from '../assets/svgs/arrow-right.svg';
+import GraphSvg from '../assets/svgs/graph.svg';
+import Graph2Svg from '../assets/svgs/graph2.svg';
 
 interface HeroSectionProps {
     className?: string;
@@ -54,9 +56,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
                                     </div>
 
                                     {/* Right: DEX volume with line chart */}
-                                    <div className="flex flex-col justify-center">
-                                        <div className="space-y-3">
-
+                                    <div className="relative flex flex-col justify-center">
+                                        <div className="space-y-3 absolute top-4 -right-8">
+                                            <img src={GraphSvg} alt="line chart" className="" />
                                         </div>
                                     </div>
                                 </div>
@@ -96,10 +98,23 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
                     </div>
 
                     {/* Right Section: Additional content or placeholder */}
-                    <div className="lg:col-span-1 p-8">
-
+                    <div className="lg:col-span-1 p-4">
+                        <div className="flex flex-col justify-center">
+                            <div className="space-y-6">
+                                <div className="text-primary-200/40 text-lg  uppercase tracking-wide font-britti">DEX VOLUME</div>
+                                <div className="flex items-center space-x-2 gap-3">
+                                    <div className="text-4xl text-primary-200 font-denton tracking-tight">$108.92K</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className=" flex flex-col justify-center">
+                            <div className="space-y-3">
+                                <img src={Graph2Svg} alt="line chart" className="" />
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     );
