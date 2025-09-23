@@ -34,7 +34,7 @@ const getPriceChartDirection = (change24h: number): 'up' | 'down' => {
 };
 
 // Convert MeteoraPool to TokenData
-const convertPoolToTokenData = (pool: MeteoraPool, index: number): TokenData => {
+const convertPoolToTokenData = (pool: MeteoraPool,): TokenData => {
     // Extract token name from the pool name (e.g., "PUMP-SOL" -> "PUMP")
     const tokenName = pool.name.split('-')[0];
     const tokenSymbol = `$${tokenName}`;
@@ -108,7 +108,7 @@ export const TradingTable: React.FC<TradingTableProps> = ({ className = '' }) =>
             setLoading(true);
             setError(null);
             const pools = await meteoraApi.getTrendingTokens(1, 50);
-            const convertedTokens = pools.map((pool, index) => convertPoolToTokenData(pool, index));
+            const convertedTokens = pools.map((pool) => convertPoolToTokenData(pool));
             setTokens(convertedTokens);
         } catch (err) {
             setError('Failed to fetch trending tokens');
@@ -205,11 +205,7 @@ export const TradingTable: React.FC<TradingTableProps> = ({ className = '' }) =>
             });
         }
     };
-    const PriceChart: React.FC<{ type: 'up' | 'down' }> = ({ type }) => {
-        const color = type === 'up' ? '#10B981' : '#EF4444'; // green-500 or red-500
-        const points = type === 'up'
-            ? "2,12 4,8 6,10 8,6 10,4 12,2 14,1 16,0"
-            : "2,0 4,1 6,2 8,4 10,6 12,8 14,10 16,12";
+    const PriceChart: React.FC<{ type: 'up' | 'down' }> = ({ }) => {
 
         return (
             <div className="w-16 h-8 bg-stone-800 rounded flex items-center justify-center p-1">
@@ -242,7 +238,6 @@ export const TradingTable: React.FC<TradingTableProps> = ({ className = '' }) =>
             </div>
         </div>
     );
-    console.log('tokens', tokens)
     return (
         <div className={`${className}`}>
             <div className="overflow-hidden">
