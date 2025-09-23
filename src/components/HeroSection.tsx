@@ -3,7 +3,7 @@ import SolanaRingSvg from '../assets/svgs/solana-ring.svg';
 import ArrowRightSvg from '../assets/svgs/arrow-right.svg';
 import GraphSvg from '../assets/svgs/graph.svg';
 import Graph2Svg from '../assets/svgs/graph2.svg';
-
+import TimeLineSvg from '../assets/svgs/timeline.svg';
 interface HeroSectionProps {
     className?: string;
 }
@@ -101,7 +101,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
                     <div className="lg:col-span-1 p-4">
                         <div className="flex flex-col justify-center">
                             <div className="space-y-6">
-                                <div className="text-primary-200/40 text-lg  uppercase tracking-wide font-britti">DEX VOLUME</div>
+                                <div className='flex items-center justify-between'>
+                                    <div className="text-primary-200/40 text-lg  uppercase tracking-wide font-britti">DEX VOLUME</div>
+                                    <img src={TimeLineSvg} alt="timeline" className="pr-10" />
+                                </div>
+
                                 <div className="flex items-center space-x-2 gap-3">
                                     <div className="text-4xl text-primary-200 font-denton tracking-tight">$108.92K</div>
                                 </div>
