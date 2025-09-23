@@ -1,7 +1,7 @@
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { BottomNav, HeroSection, TopNav, TradingTable } from './components';
 
-import { TopNav, BottomNav, HeroSection, TradingTable } from './components';
-
-function App() {
+function HomePage() {
   return (
     <div className="min-h-screen bg-black text-white">
       <TopNav />
@@ -11,6 +11,16 @@ function App() {
       </main>
       <BottomNav className="fixed bottom-0 left-0 right-0 z-50" />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </Router>
   );
 }
 

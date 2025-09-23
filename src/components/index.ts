@@ -8,3 +8,7 @@ export { TopNav } from './TopNav';
 export { BottomNav } from './BottomNav';
 export { HeroSection } from './HeroSection';
 export { TradingTable } from './TradingTable';
+export { TrendingPage } from './TrendingPage';
+export { TrendingTokensTable } from './TrendingTokensTable';
+export { LPManager } from './LPManager';
+export { WalletConnection } from './WalletConnection';

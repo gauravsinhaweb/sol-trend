@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/svgs/logo.svg';
 
 interface TopNavProps {
@@ -6,18 +7,29 @@ interface TopNavProps {
 }
 
 export const TopNav: React.FC<TopNavProps> = ({ className = '' }) => {
+    const location = useLocation();
+
     return (
         <nav className={`bg-black border-b border-stone-700 px-6 py-4 ${className}`}>
             <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-8">
-                    <div className="text-2xl flex items-center pl-4  space-x-2 font-denton font-thin text-primary-100 cursor-pointer">
+                    <Link to="/" className="text-2xl flex items-center pl-4 space-x-2 font-denton font-thin text-primary-100 cursor-pointer">
                         <img src={logo} alt="Cleopatra" className="w-6 h-6" />
                         <span className="text-primary-100">cleopetra</span>
-                    </div>
+                    </Link>
                     <div className="hidden md:flex items-center space-x-6">
-                        <a href="#" className="text-primary-100 transition-colors">
+                        <Link
+                            to="/"
+                            className={`transition-colors ${location.pathname === '/' ? 'text-primary-100' : 'text-stone-400 hover:text-primary-100'}`}
+                        >
                             Discover
-                        </a>
+                        </Link>
+                        <Link
+                            to="/trending"
+                            className={`transition-colors ${location.pathname === '/trending' ? 'text-primary-100' : 'text-stone-400 hover:text-primary-100'}`}
+                        >
+                            Trending
+                        </Link>
                         <a href="#" className="text-stone-400 hover:text-primary-100 transition-colors">
                             Portfolio
                         </a>
